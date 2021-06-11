@@ -1,0 +1,32 @@
+server:
+  port: 8090
+  context-path: /
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/mndc
+    username: root
+    password: koreait
+  #TODO : 추후 실제 서비스때 계정 및 패스워드 변경 필요
+  #TODO : 및 DB에 계정 생성 및 권한 부여 필요
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 6e5cfa586a0a21f7dd92
+            client-secret: 8b8774397c6ef793a3951f7d5b95500bf11ab268
+
+custom:
+  oauth2:
+    kakao:
+      client-id: c8c2eb353479ec0dcab44444610489f0
+      client-secret: cfca5982424cd5d7d11fba16aae9656d548882d3
+    naver:
+      client-id: HUlPJQ3woHNacSAPETZg
+      client-secret: UDPdHO0ViQ
