@@ -45,6 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .defaultSuccessUrl("/loginSuccess")
                 .failureUrl("/loginFailure")
+                .permitAll()
                 .and() //권한이 없을때 나온 error가 가는 경로
                 .exceptionHandling()
                 .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/"));
